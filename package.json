@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.15",
+    "daisyui": "^4.12.13"
+  },
+  "scripts": {
+    "tw:build": "tailwindcss build public/css/tailwind.css -o public/css/main.css",
+    "tw:watch": "tailwindcss build public/css/tailwind.css -o public/css/main.css --watch"
+  }
+}
