@@ -12,6 +12,8 @@
 * Published URL: ___________________________________________________________
 *
 ********************************************************************************/
+require('pg');
+const Sequelize = require('sequelize');
 const express = require('express');
 const legoData = require('./modules/legoSets');
 const path = require('path');
@@ -19,7 +21,8 @@ const app = express();
 
 const HTTP_PORT = process.env.PORT || 8088;
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
+
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/home.html'));
